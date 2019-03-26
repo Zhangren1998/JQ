@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js">
+		</script>
+		
+	</head>
+	<body>
+		<p><input name="chk" type="checkbox" value="滑雪"/>滑雪</p>
+		<p><input name="chk" type="checkbox" value="游泳"/>游泳</p>
+		<p><input name="chk" type="checkbox" value="爬山"/>爬山</p>
+		<p><input name="btn" type="button" onclick="allChecked()" value="选择"/></p>
+		<p><input name="btn" type="button" onclick="closeChecked()" value="全部取消"/></p>
+		<p><input name="btn" type="button" onclick="reverseChecked()" value="反选"/></p>
+	</body>
+	<script type="text/javascript">
+			$("p").css("border","2px dashed black");
+			function allChecked(){
+				$("p>input[name='chk']").prop("checked",true)
+			}
+			function closeChecked(){
+				$("p>input[name=chk]").prop("checked",false);
+			}
+			function reverseChecked(){
+				$("p>input[name=chk]").each(function(){
+					 $(this).prop("checked", !$(this).prop("checked"));
+				})
+			}
+//			function reverseChecked(){
+//				if(("p>input[name=chk]").prop("checked").value)
+//			}
+			
+	</script>
+</html>
